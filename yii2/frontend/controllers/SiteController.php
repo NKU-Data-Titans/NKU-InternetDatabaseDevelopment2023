@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: NKU Data Titans
+ * Coding by 武桐西 2112515, 20231211
+ * 前端基本框架controller
+ */
 namespace frontend\controllers;
 
 use frontend\models\ResendVerificationEmailForm;
@@ -20,6 +25,7 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+    public $layout = 'main_layout';
     /**
      * {@inheritdoc}
      */
@@ -45,7 +51,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['get'],
                 ],
             ],
         ];
@@ -144,7 +150,10 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
+    public function actionTeamMem()
+    {
+        return $this->render('teammem');
+    }
     /**
      * Signs user up.
      *

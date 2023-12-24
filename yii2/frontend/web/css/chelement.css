@@ -1,0 +1,89 @@
+/**
+ * Team: NKU Data Titans
+ * Coding by 纪潇洋 2110611 , 20231212
+ * 化学元素页css
+ */
+.chelement-shell {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 3px;
+    right: -10px;
+
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.chelement-title {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    position: relative;
+    font-size: 3vw;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15), 10px 0 10px rgba(0, 0, 0, 0.15), 0 -10px 10px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    animation: slideInFromLeft 2s ease;
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.chelementnt-shell div {
+    position: relative;
+
+}
+
+.chelementnt-shell::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.chelementnt-img {
+    height: 50vh;
+    margin: auto;
+}
+
+.chelementnt-header {
+    font-size: 20px;
+    margin: 30px auto;
+    color: whitesmoke;
+    letter-spacing: 4px;
+}
+
+.chelementnt-img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chelementnt-intro {
+    margin: 50px 100px;
+    font-size: 24px;
+    line-height: 32px;
+    text-indent: 48px;
+}

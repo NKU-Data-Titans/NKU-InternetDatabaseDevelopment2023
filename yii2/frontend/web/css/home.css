@@ -1,0 +1,62 @@
+/**
+ * Team: NKU Data Titans
+ * Coding by 武桐西 2112515 , 20231213
+ * 首页css
+ */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background-color: #808080; 默认背景颜色 */
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.home-shell {
+    height: 100vh; /* 解决header与footer“粘连”在窗口的问题 */
+    overflow-x: hidden;
+    perspective: 3px;
+    right: -10px;
+}
+
+.home-shell div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 30px;
+    letter-spacing: 2px;
+}
+
+.home-image {
+    transform: translateZ(-1px) scale(1.6);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+
+.home-text {
+    height: 50vh;
+    background: linear-gradient(to bottom right, #4a6cd4, #8f3f8d);
+}
+
+.home-text>h1 {
+    color: #fff;
+    font-size: 20px;
+    text-indent: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 35px;
+}
+
+.home-heading {
+    z-index: -1;
+    transform: translateY(-30vh) translateZ(1px);
+    color: #fff;
+    font-size: 90px;
+    font: weight 250px;
+}
+
+.home-shell::-webkit-scrollbar {
+    width: 0 !important
+}

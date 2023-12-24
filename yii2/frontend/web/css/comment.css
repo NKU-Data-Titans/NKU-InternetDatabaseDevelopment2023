@@ -1,0 +1,138 @@
+/**
+ * Team: NKU Data Titans
+ * Coding by 胡亚飞 2111690 , 20231212
+ * 评论css
+ */
+ .container {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.comment-title {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    position: relative;
+    font-size: 3vw;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    /* box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15); */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15), 10px 0 10px rgba(0, 0, 0, 0.15), 0 -10px 10px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    animation: slideInFromLeft 2s ease;
+}
+
+
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.comment-box {
+    width: 85%;
+    margin-top: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-bottom: 35px;
+}
+
+.comment-input {
+    margin: 5px 10px;
+    outline: none;
+    background: #efefef;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#commentform-user {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+#commentform-comment {
+    resize: none;
+    width: 95%;
+    height: 100px;
+    background-color: #f9f9f6;
+}
+
+.comment-header {
+    color: #333333;
+    margin: 15px 20px;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.comment-btn {
+    margin: 12px 0 0 10px;
+    border: 0;
+    color: #fff;
+    background: #298d9f;
+    padding: 12px 20px 12px 20px;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+.comment-btn:hover {
+    background: #175763;
+}
+
+.comment-usr-info {
+    color: #333333;
+    margin: 10px 30px;
+    text-transform: capitalize;
+}
+
+.comment-usr-date {
+    font-size: 12px;
+    font-weight: 300;
+    float: right;
+    margin-right: 10px;
+}
+
+.comment-hr {
+    background-color: #808080;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.comment-content {
+    border-radius: 7px;
+    margin: 0 30px 15px;
+    font-weight: 300;
+    color: #333;
+    background: #f9f9f6;
+    padding: 2rem 1rem;
+    word-wrap: break-word;
+}

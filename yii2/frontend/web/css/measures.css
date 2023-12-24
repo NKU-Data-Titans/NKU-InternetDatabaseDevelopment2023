@@ -1,0 +1,77 @@
+/**
+ * Team: NKU Data Titans
+ * Coding by 纪潇洋 2110611, 20231212
+ * 措施css
+ */
+.measures-container {
+    height: 700px;
+    width: 100%;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.measures-title {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    position: relative;
+    font-size: 3vw;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15), 10px 0 10px rgba(0, 0, 0, 0.15), 0 -10px 10px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    animation: slideInFromLeft 2s ease;
+}
+
+.measure-block {
+    position: relative;
+    padding: 20px;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.measure-block h3::after, .measure-block p::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    z-index: -1;
+}
+
+.measure-block h3, .measure-block p {
+    position: relative;
+        /* color: #333;  */
+    text-align: center; 
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}

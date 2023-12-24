@@ -4,4 +4,5 @@ protected/runtime/*
 !protected/runtime/.gitignore
 protected/data/*.db
 themes/classic/views/
->>>>>>> dcd79427a4edc220b1f470d90deadb866ddef42c
+
+.vscode/

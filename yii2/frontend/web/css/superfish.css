@@ -1,0 +1,170 @@
+.menu_block {
+	position: relative;
+	padding-top: 30px;
+}
+
+nav>.sf-menu {
+	text-align: center;
+}
+
+nav {
+	position: relative;
+	padding: 0px 0 0 0;
+}
+
+.sf-menu {
+    display: flex;
+    align-items: center;
+}
+
+.sf-menu ul {
+	position: absolute;
+	top: -999px;
+	display: none;
+	/* left offset of submenus need to match (see below) */
+}
+
+.sf-menu>li {
+	float: none; /* 在使用 Flexbox 布局时，不需要 float */
+	position: relative;
+	margin-left: 27px;
+	border: 1px solid transparent;
+}
+
+.sf-menu>li:first-child {
+	margin-left: -200px;
+}
+
+.sf-menu > li:nth-child(2) {
+   margin-left: 35px;
+}
+
+.sf-menu>.logo {
+	flex-grow: 0; /* 防止 logo 伸展以填充额外的空间 */
+}
+
+.sf-menu>.logo>a {
+	display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中对齐图片和文字 */
+    text-decoration: none; /* 移除链接的默认下划线 */
+}
+
+.sf-menu > .logo > a > img {
+    margin-right: 10px; /* 在图片和文字之间添加一些空间 */
+}
+
+.sf-menu>li:hover,
+.sf-menu>li.sfHover,
+.sf-menu>li.current {
+	background: #800080;
+	border-radius: 7px;
+}
+
+.sf-menu>.logo:hover,
+.sf-menu>.logo.sfHover,
+.sf-menu>.logo.current {
+	background: transparent;
+	border-color: transparent; /* 清除边框颜色 */
+}
+
+
+.sf-menu>li>a {
+	font-size: 24px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #333333;
+	position: relative;
+	text-transform: uppercase;
+	line-height: 24px;
+	z-index: 999;
+	position: relative;
+	display: block;
+	padding: 11px 19px 13px 20px;
+	border: 1px solid transparent;
+	border-radius: 7px;
+}
+
+.sf-menu>.logo>a {
+	font-size: 23px;
+	font-family: 'Lobster', cursive;
+	color: #ffffff;
+}
+
+
+.sf-menu>li.sfHover>a,
+.sf-menu>li.current>a,
+.sf-menu>li:hover>a:hover {
+	color: #c7c8cb;
+	background: #800080;
+	border-radius: 7px;
+}
+
+.sf-menu>.logo.sfHover>a,
+.sf-menu>.logo.current>a,
+.sf-menu>.logo:hover>a:hover {
+	color: #333333;
+	background: transparent;
+	border-color: transparent;
+}
+
+
+
+/*================================>> 2 Level <<========================================*/
+.sf-menu li ul,
+.sf-menu li.sfHover>ul {
+	top: 51px;
+	left: -1px;
+	width: 100%;
+	z-index: 999;
+	padding-top: 27px;
+	padding-bottom: 20px;
+	width: 127px;
+	background: #800080;
+	border-radius: 7px;
+}
+
+.sf-menu li ul li {
+	text-align: left;
+	float: none !important;
+	margin-bottom: 9px;
+	padding-left: 13px;
+}
+
+.sf-menu li ul li+li {
+	margin-bottom: 8px;
+}
+
+.sf-menu li ul li:first-child {
+	padding-top: 0;
+	border: none;
+}
+
+.sf-menu li ul li a {
+	font-size: 14px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #c7c8cb;
+	text-transform: uppercase;
+	line-height: 20px;
+	position: relative;
+}
+
+.sf-menu li li a:hover,
+.sf-menu li.sfHover li.sfHover>a {
+	color: #000;
+}
+
+/*================================>> 3 Level <<========================================*/
+.sf-menu li.sfHover li.sfHover ul {
+	padding-top: 1px;
+	top: 0 !important;
+	text-align: center;
+	position: relative !important;
+}
+
+.sf-menu li li ul li {
+	text-align: center !important;
+}
+
+.sf-menu li li ul li a {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}

@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </style>
 
     <script>
-   var chartDom = document.getElementById('detection-container');
+    var chartDom = document.getElementById('detection-container');
     var myChart = echarts.init(chartDom);
     var option;
 

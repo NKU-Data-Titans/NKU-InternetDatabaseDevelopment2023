@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: NKU Data Titans
+ * Coding by 武桐西 2112515, 20231207
+ * 后台登入页面
+ */
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
@@ -11,24 +15,21 @@ $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please fill out the following fields to login:</p>
-
+    <h1><?= Html::encode('登录') ?></h1>
+    <p>默认用户名为:admin，密码为:admin</p>
     <div class="row">
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true])->label('用户名') ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'password')->passwordInput()->label('密码') ?>
 
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
                 <div class="form-group">
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
-
             <?php ActiveForm::end(); ?>
         </div>
     </div>

@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Team: NKU Data Titans
+ * Coding by 武桐西 2112515
+ * 修改用户注册时状态默认为激活
+ */
+
 namespace common\models;
 
 use Yii;
@@ -46,14 +53,15 @@ class User extends ActiveRecord implements IdentityInterface
             TimestampBehavior::className(),
         ];
     }
-
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
-        return [
-            ['status', 'default', 'value' => self::STATUS_INACTIVE],
+        return
+         [
+            // ['status', 'default', 'value' => self::STATUS_INACTIVE],
+            ['status', 'default', 'value' => self::STATUS_ACTIVE], // 修改默认状态为激活
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
         ];
     }
@@ -165,6 +173,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
+
         return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 

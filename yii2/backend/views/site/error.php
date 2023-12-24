@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: NKU Data Titans
+ * Coding by 武桐西 2112515
+ * 后台错误页面
+ */
 /* @var $this yii\web\View */
 /* @var $name string */
 /* @var $message string */

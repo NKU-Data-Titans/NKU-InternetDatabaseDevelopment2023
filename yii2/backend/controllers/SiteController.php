@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Team: NKU Data Titans
+ * Coding by 武桐西 2112515, 20231207
+ * 网站用户系统
+ */
+
+
 namespace backend\controllers;
 
 use Yii;
@@ -12,6 +20,7 @@ use common\models\LoginForm;
  */
 class SiteController extends Controller
 {
+    public $layout = "main_layout";
     /**
      * {@inheritdoc}
      */

@@ -1,0 +1,62 @@
+/**
+ * Team: NKU Data Titans
+ * Coding by 胡亚飞 2111690 , 20231222
+ * 核污染监测数据页css
+ */
+ .detection-container {
+
+    height: 700px;
+    /* width: 100%; */
+    width: 1132px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 4px solid #000000;
+    border-radius: 7px;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.detection-title {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    position: relative;
+    font-size: 3vw;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15), 10px 0 10px rgba(0, 0, 0, 0.15), 0 -10px 10px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    animation: slideInFromLeft 2s ease, colorChange 3s infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
